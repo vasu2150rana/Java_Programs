@@ -1,0 +1,17 @@
+
+
+public class Calander {
+        public static void main(String[] args) {
+                Scanner scanner = new Scanner(System.in);
+                System.out.print("Enter year (e.g., 2024): ");
+                int year = scanner.nextInt();
+
+                System.out.print("Enter month (1-12): ");
+                int month = scanner.nextInt();
+                displayCalendar(year, month);
+        }
+
+        public static void displayCalendar(int year, int month) {
+                month -= 1;
+                GregorianCalendar calendar = new GregorianCalendar(year, month, 1);
+                int firstDayOfWeek = calendar.get(Calendar.DAY_OF_WEEK);
